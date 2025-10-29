@@ -5,6 +5,7 @@ $block = (New-Object Net.Webclient).downloadstring("https://raw.githubuserconten
 # Split into lines and execute each one in current session
 $scriptText -split "`r?`n" | ForEach-Object {
     if (-not [string]::IsNullOrWhiteSpace($_)) {
+        Write-Host $_
         Invoke-Expression $_
     }
 }
